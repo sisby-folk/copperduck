@@ -1,0 +1,60 @@
+<Configuration>
+  <Add 	OfficeClientEdition="64" 
+		Channel="BetaChannel"
+		MigrateArch="TRUE">
+    <Product ID="O365BusinessRetail">
+      <Language ID="en-us" />
+      <ExcludeApp ID="Access" />
+      <ExcludeApp ID="Groove" />
+      <ExcludeApp ID="Lync" />
+      <ExcludeApp ID="OneDrive" />
+      <ExcludeApp ID="OneNote" />
+      <ExcludeApp ID="Outlook" />
+	  <ExcludeApp ID="PowerPoint" />	
+      <ExcludeApp ID="Publisher" />  
+	  <ExcludeApp ID="Teams" />
+	  <!--<ExcludeApp ID="Word" />-->
+	  <!--<ExcludeApp ID="Excel" />-->
+    </Product>
+  </Add>
+  <Property Name="FORCEAPPSHUTDOWN" Value="TRUE" />
+  <Updates Enabled="TRUE" Channel="BetaChannel"/>
+  <Display Level="Full" AcceptEULA="TRUE" />
+  <AppSettings>
+	<!-- Sharepoint Improvements -->
+	<User Key="software\microsoft\office\16.0\common\sharepointintegration" Name="hidelearnmorelink" Value="1" Type="REG_DWORD" App="office16" Id="L_HideTheLearnMoreAboutSharePointHyperlink" />
+    <User Key="software\microsoft\office\16.0\common\internet" Name="opendocumentsreadwritewhilebrowsing" Value="1" Type="REG_DWORD" App="office16" Id="L_OpenOfficedocumentsasreadwritewhilebrowsing" />
+    <User Key="software\microsoft\office\16.0\common\internet" Name="opendirectlyinapp" Value="1" Type="REG_DWORD" App="office16" Id="L_OpenOfficeDocumentDirectlyInOfficeApplication" />
+    <!-- Disable Telemetry -->
+	<User Key="software\microsoft\office\16.0\common" Name="sendcustomerdata" Value="0" Type="REG_DWORD" App="office16" Id="L_Sendcustomerdata" />
+    <User Key="software\microsoft\office\16.0\common" Name="qmenable" Value="0" Type="REG_DWORD" App="office16" Id="L_EnableCustomerExperienceImprovementProgram" />
+    <User Key="software\microsoft\office\16.0\common" Name="updatereliabilitydata" Value="0" Type="REG_DWORD" App="office16" Id="L_UpdateReliabilityPolicy" />
+    <User Key="software\microsoft\office\16.0\common\feedback" Name="enabled" Value="0" Type="REG_DWORD" App="office16" Id="L_SendFeedback" />
+    <User Key="software\microsoft\office\16.0\common\general" Name="optindisable" Value="1" Type="REG_DWORD" App="office16" Id="L_SuppressRecommendedSettingsDialog" />
+    <User Key="software\microsoft\office\16.0\common\privacy" Name="disconnectedstate" Value="2" Type="REG_DWORD" App="office16" Id="L_DisconnectConnectedExperiences"/> <!-- custom -->
+    <User Key="software\microsoft\office\16.0\common\privacy" Name="controllerconnectedservicesenabled" Value="2" Type="REG_DWORD" App="office16" Id="L_DisconnectConnectedExperiences"/> <!-- custom -->
+    <User Key="software\microsoft\office\16.0\common\clienttelemetry" Name="sendtelemetry" Value="2" Type="REG_DWORD" App="office16" Id="L_DisableClientTelemetry" /> <!-- custom -->
+	<!-- Disable Extraneous Dialogs and Useless Features -->
+	<User Key="software\microsoft\office\16.0\common\security" Name="disablehyperlinkwarning" Value="1" Type="REG_DWORD" App="office16" Id="L_Suppresshyperlinkwarnings" />
+    <User Key="software\microsoft\office\16.0\common\services\fax" Name="nofax" Value="1" Type="REG_DWORD" App="office16" Id="L_DisableFaxOverInternetfeature" />
+    <User Key="software\microsoft\office\16.0\common\fixedformat" Name="disablepublishtofixedformat" Value="1" Type="REG_DWORD" App="office16" Id="L_Specifytypesoffixedformatoptionsavailabletotheuser" />
+    <User Key="software\microsoft\office\16.0\common\general" Name="sound" Value="0" Type="REG_DWORD" App="office16" Id="L_Providefeedbackwithsound" />
+    <User Key="software\microsoft\office\16.0\firstrun" Name="disablemovie" Value="1" Type="REG_DWORD" App="office16" Id="L_DisableMovie" />
+    <User Key="software\microsoft\office\16.0\firstrun" Name="bootedrtm" Value="1" Type="REG_DWORD" App="office16" Id="L_DisableOfficeFirstrun" />
+    <User Key="software\microsoft\office\16.0\common\general" Name="disablecomingsoon" Value="1" Type="REG_DWORD" App="office16" Id="L_DisableComingSoon" />
+	<User Key="software\microsoft\office\16.0\common\toolbars" Name="screentipscheme" Value="2" Type="REG_DWORD" App="office16" Id="L_ShowScreenTips" />
+	<User Key="software\microsoft\office\16.0\common" Name="linkedin" Value="0" Type="REG_DWORD" App="office16" Id="L_AllowLinkedInFeatures" />
+    <!-- Enable Dark Theme -->
+	<User Key="software\microsoft\office\16.0\common" Name="default ui theme" Value="4" Type="REG_DWORD" App="office16" Id="L_DefaultUIThemeUser" />
+	<!-- Disable Extraneous Excel Features -->
+	<User Key="software\microsoft\office\16.0\common\toolbars\excel" Name="allowselectionfloaties" Value="0" Type="REG_DWORD" App="excel16" Id="L_AllowSelectionFloaties" />
+	<User Key="software\microsoft\office\16.0\excel\options" Name="livepreview" Value="0" Type="REG_DWORD" App="excel16" Id="L_DisableLivePreview" />
+    <!-- Developer-Style Word/Excel Trust Settings -->
+	<User Key="software\microsoft\office\16.0\excel\options" Name="developertools" Value="1" Type="REG_DWORD" App="excel16" Id="L_DisplayDeveloperTab" />
+    <User Key="software\microsoft\office\16.0\word\options" Name="developertools" Value="1" Type="REG_DWORD" App="word16" Id="L_DisplayDeveloperTab" />
+    <User Key="software\microsoft\office\16.0\excel\security" Name="accessvbom" Value="1" Type="REG_DWORD" App="excel16" Id="L_TrustaccesstoVisualBasicProject" />
+    <User Key="software\microsoft\office\16.0\word\security" Name="accessvbom" Value="1" Type="REG_DWORD" App="word16" Id="L_TrustaccesstoVisualBasicProject" />
+	<User Key="software\microsoft\office\16.0\excel\security" Name="vbawarnings" Value="1" Type="REG_DWORD" App="excel16" Id="L_VBAWarningsPolicy" />
+	<User Key="software\microsoft\office\16.0\word\security" Name="vbawarnings" Value="1" Type="REG_DWORD" App="word16" Id="L_VBAWarningsPolicy" />
+  </AppSettings>
+</Configuration>
